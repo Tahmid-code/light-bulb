@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Centering the lightbulb */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #333;
+  }
+  
+  /* Lightbulb shape */
+  .lightbulb {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background-color: #fcf084;
+    border-radius: 50%;
+  }
+  .lightbulb.hidden_bulb{
+    background-color: green;
+  }
+  
+  /* Base of the lightbulb */
+  .base {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 40px;
+    background-color: #666;
+    border-radius: 5px;
+  }
+  
+  /* Base lines for texture */
+  .base::before, .base::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 12px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+  .base::before {
+    top: 8px;
+    transform: translateX(-50%);
+  }
+  .base::after {
+    top: 20px;
+    transform: translateX(-50%);
+  }
+  /* switch */
+  .switch {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 10%;
+    bottom: 10%;
+    background-color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  /* button */
+  .switch .btn {
+    width: 30px;
+    height: 40px;
+    background: linear-gradient(#777, #fff, #777); 
+    border: 2px solid;   
+    position: relative;
+
+  }
+  .switch .btn::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(#fff, #fff);
+
+  }
+  .switch .btn.hidden_btn::before{
+    top: 15%;
+  }
+
+  
